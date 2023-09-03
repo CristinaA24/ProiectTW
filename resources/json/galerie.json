@@ -1,0 +1,37 @@
+{
+	"cale_galerie":"resources/pictures/wedding",
+	"imagini": [
+		{
+			"fisier":"1.jpg",
+			"descriere":"Brioșe",
+			"luni":["martie","februarie","iunie"]
+		},
+		{
+			"fisier":"4.jpg",
+			"descriere":"Clătite cu dulceață",
+			"luni":["ianuarie","februarie","iunie"]
+			
+		},
+		{
+			"fisier":"7.jpg",
+			"descriere":"Gogoși glazurate",
+			"luni":["ianuarie","februarie","iunie","martie"]
+		},
+		{
+			"fisier":"10.jpg",
+			"descriere":"Tort cu scorțisoară"
+		},
+		{
+			"fisier":"13.jpg",
+			"descriere":"Prăjitură cu ciocolată"
+		},
+		{
+			"fisier":"15.jpg",
+			"descriere":"Tartă cu afine"
+		},
+		{
+			"fisier":"16.jpg",
+			"descriere":"Tort special"
+		}
+	]
+}

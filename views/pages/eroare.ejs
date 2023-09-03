@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html  lang="ro">
+  
+    <head>
+        <title>eroare 404</title>
+    
+        <meta name="keywords" content="foto, fotografie, sedinte foto Braila, album de promotie, nunti, botezuri, eveniment">
+        <meta name="description" content="Fotografii si servicii foto pentru nunti, botezuri, absolvire si evenimente private">
+        <link rel="stylesheet" type="text/css" href="/resources/css/eroare.css"
+        <%- include("../fragments/head.ejs") %>
+    </head>    
+        
+    <body>
+        
+        <%- include("../fragments/header.ejs");  %> 
+
+        <main>
+            <div id="err-coloane">
+                <div id="err-imag">
+                    <img src="<%- locals.imagine %>" />
+                </div>
+                <section>
+                    <h2><%- locals.titlu %></h2>
+                    <p><%- locals.text %></p>
+                </section>
+            </div>
+        </main>
+        
+        <%- include("../fragments/footer.ejs");  %> 
+
+
+    </body>
+</html>

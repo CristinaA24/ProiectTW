@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="foto, fotografie, sedinte foto Braila, album de promotie, nunti, botezuri, eveniment">
+        <meta name="description" content="Fotografii si servicii foto pentru nunti, botezuri, absolvire si evenimente private">
+        <link rel="stylesheet" href="/resources/css/style.css" type = "text/css"/>
+        
+        <title>Foto Antonescu - produs</title>
+        <%- include("../fragments/head") %>     
+        <link href="/resources/css/product.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+    <%- include("../fragments/header") %>
+
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                    <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                    <p>Tarife: <span class="pret"><%- locals.prod.tarife %> </span></p>
+                    <p>Tip eveniment: <span class="tip_eveniment"><%- locals.prod.tip_eveniment %> </span></p>
+                    <p>Prelucrare poze: <span class="prelucrare_poze"><%- locals.prod.prelucrare_poze %> </span></p>
+                    <p>Tip imagine: <span class="tip_imagine"><%- locals.prod.tip_imagine %> </span></p>
+                    <p>Tip serviciu: <span class="tip_serviciu"><%- locals.prod.tip_servici %> </span></p>
+                    <p>Durata eveniment: <span class="durata_eveniment"><%- locals.prod.durata_eveniment %> </span></p>
+                    <p>Data adăugare: <span class="categorie"><%- locals.prod.data %> </span></p>
+                    <figure class="imag-produs">
+                        <img  src="/resources/pictures/produse/<%- locals.prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- locals.prod.nume %>]" />
+                    </figure>    
+                </article>
+            
+        </section>
+    </main>
+
+    <%- include("../fragments/footer") %>
+    </body>
+</html>

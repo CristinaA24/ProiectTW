@@ -1,0 +1,22 @@
+{
+  "name": "fotoantonescu",
+  "version": "1.0.0",
+  "description": "site servicii foto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fotografie",
+    "album",
+    "servicii"
+  ],
+  "author": "Antonescu Cristina",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "formidable": "^3.5.1",
+    "sass": "^1.66.1",
+    "sharp": "^0.31.3"
+  }
+}

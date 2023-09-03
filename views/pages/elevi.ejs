@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="description" content="Fotografii si servicii foto pentru nunti, botezuri, absolvire si evenimente private">
+        <meta name="keywords" content="foto, fotografie, sedinte foto Braila, album de promotie, nunti, botezuri, eveniment">
+        <link rel="stylesheet" href="/resources/css/products.css" type="text/css" />
+        <link rel="stylesheet" href="/resources/css/elevi.css" type="text/css" />
+        <title>Foto Antonescu - home</title>
+        <%- include("../fragments/head") %>     
+        <script type="text/javascript" src=/resources/js/produse.js></script>
+        <script type="text/javascript" src=/resources/js/elevi.js></script>
+    </head>
+    <body>
+    <%- include("../fragments/header") %>
+
+    <main>
+        <label> Nume: <input type="text" id="inp-nume"></label>
+        <!--<label> Maxim calorii: <input type="number" id="inp-calorii" value="10000"></label>-->
+        <div> Calorii:<!-- trebuie sa aiba acelasi name ca sa formeze un grup -->
+            <p><label>Dietetic (calorii &lt; 350)
+                <input id="i_rad1"  name="gr_rad" value="0:350" type="radio"/>
+            </label></p>
+            <p><label>Mediu (350 &le; calorii &lt; 700)
+                <input id="i_rad2"  name="gr_rad" value="350:750" type="radio"/>
+            </label>
+            <p><label>Ridicat caloric (700 &le; calorii)
+                <input id="i_rad3" name="gr_rad" value="700:1000000000" type="radio"/>
+            </label>
+            <p><label>Toate
+                <input id="i_rad4" checked name="gr_rad" value="toate" type="radio"/>
+            </label>
+        </div>
+
+
+        <label> Pret minim: <input type="range" id="inp-pret" value="0" min="0"  max="70"> <span id="infoRange">(0)</span></label>
+        
+        <select id="sel_sortare">
+            <option value = "1">
+                ascendent 
+                </option>
+                <option value = "-1">
+                    descendent
+            </option>
+        </select>
+
+        <button id="sorteaza">Sorteaza</button>
+        
+        <p>
+        <button id="filtrare">Filtreaza</button> 
+        
+        
+        
+        </p>
+        
+        <p id="p-suma">Apăsați Alt+"c" pentru suma preturilor produselor afișate. </p>
+        <section id="produse">
+            <h2>Produse</h2>
+            <div class="grid-produse">
+                <% for( let prod of locals.produse) { %>
+                    <article class="elev" >
+                        <h2 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h2>
+                        <h2 class="prenume">Prenume: <a href="/produs/<%-prod.id %>" ><span class="val-prenume"><%- prod.prenume%></span></a></h2>
+                        
+                            <p class="clasa">Clasa: <span class="val-clasa"><%- prod.clasa%></span></p>
+                            <ul class="note">Note: <span class="val-note"><%- prod.note%></span></ul>
+                            <% var nrPlanete = prod.planete ? prod.planete.split(";") : []; %>
+                            <p class="planete-text">Planete</p>
+                            <ol class="nrPlanete">
+                                <span class="val-planete"><%- nrPlanete.length %></span>
+                                <% for (let planeta of nrPlanete) { %>
+                                    <li><%- planeta %></li>
+                                <% } %>
+                            </ol>
+            
+                        
+                    </article>
+                   <% } %>
+                   
+              
+            </div>
+
+        </section>
+    </main>
+
+    <%- include("../fragments/footer") %>
+    </body>
+</html>

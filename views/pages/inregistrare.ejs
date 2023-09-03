@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="foto, fotografie, sedinte foto Braila, album de promotie, nunti, botezuri, eveniment">
+        <meta name="description" content="Fotografii si servicii foto pentru nunti, botezuri, absolvire si evenimente private">
+        <link rel="stylesheet" href="/resources/css/style.css" type = "text/css"/>
+        <title>Foto Antonescu - înregistrare </title>
+        <%- include("../fragments/head") %>     
+        <script type="text/javascript" src=/resources/js/inregistrare.js></script>
+    </head>
+    <body>
+    <%- include("../fragments/header") %>
+
+    <main>
+    <div class="afisaj">
+        <h1>Inregistrare utilizator</h1>
+        <% if(!locals.raspuns) { %>    
+
+			<%-include("../pages/formular", {action: "/inregistrare"}) %>
+        <% } %>
+        
+	<% if(locals.raspuns) { %>
+	<%- locals.raspuns+"<br/>"%>
+	<% } %>
+	<% if(locals.err) { %>
+	<%- locals.err %>
+	<% } %>
+    </div>
+</main>
+
+<footer>
+    <%- include("../fragments/footer") %>
+</footer>
+
+</body>
+</html>

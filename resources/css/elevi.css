@@ -1,0 +1,133 @@
+/*grid+layout pagina*/
+body{
+    --margine-main:2%;
+    --margine-text:2%;
+    --background-pagina:white;
+    --culoare-text:black;
+    --main-background:#d4f5ff;
+    --grid-color:#78acb3;
+
+    background-color: var(--background-pagina);
+    color: var(--culoare-text);
+
+    font-size: 18px;
+    transition: all 1s linear;
+
+}
+
+body.dark{
+    --background-pagina:black;
+    --culoare-text: white;
+    --main-background:grey;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.center2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+main{
+    background-color: var(--main-background);
+    /* margin-left:var(--margine-main);
+    margin-right:var(--margine-main); */
+}
+
+footer{
+    background-color:white;
+    margin-top: 2%;
+    margin-left: var(--margine-main);
+
+}
+
+.grid-produse{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /*grid-row-gap:15px;*/
+    grid-column-gap:15px;
+   
+}
+
+.elev:nth-child(9n+1), .elev:nth-child(9n){
+    background-color: purple;
+}
+.elev:nth-child(9n+2), .elev:nth-child(9n+4), .elev:nth-child(9n+6), .elev:nth-child(9n+8){
+    background-color: blanchedalmond;
+}
+.elev:nth-child(9n+3), .elev:nth-child(9n+5), .elev:nth-child(9n+7){
+    background-color: brown;
+}
+
+
+
+#grid-pagina > *{
+    border: 1px solid black;
+    margin:1;
+    padding:1;
+}
+
+
+#welcome{
+    grid-area:z-welcome;
+    
+}
+
+#tabel{
+    grid-area:z-tabel;
+}
+
+#calendar{
+    grid-area:z-calendar;
+}
+
+#anunturi{
+    grid-area:z-anunturi;
+}
+#lista-utilizatori-online{
+    grid-area:z-lista-utilizatori-online;
+}
+#statistici{
+    grid-area:z-statistici;
+    
+}
+#info-site{
+    grid-area:z-info-site;
+}
+
+#freestyle{
+    grid-area: z-freestyle;
+}
+
+/*redimensionare ecran mic si mediu*/
+@media screen and (max-width:1500px){
+    body{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:1000px){
+    body{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:700px){
+    #grid-pagina{
+        display: block;
+    }
+    body{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:1200px){
+    .grid-produse{
+        grid-template-columns: 1fr 1fr; 
+    }
+    
+}

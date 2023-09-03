@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Nunta</title>
+        
+        <meta name="keywords" content="foto, fotografie, sedinte foto Braila, album de promotie, nunti, botezuri, eveniment">
+        <meta name="description" content="Fotografii si servicii foto pentru nunti, botezuri, absolvire si evenimente private">
+
+        <%- include("../fragments/head.ejs") %>
+    </head>    
+
+<body>
+    <%- include("../fragments/header.ejs") %>
+    <main>
+        <section id="galerie_statica">
+            <h2>Galerie nunta</h2>
+            
+            <div id="grid-galerie">
+                <% for(let imag of locals.imagini){ %>
+                    <figure>
+                        <img src="<%- imag.fisier %>" alt="imagine">
+                        <figcaption><%- imag.descriere %></figcaption>
+                    </figure>
+                <% } %>
+            </div>
+    </main>
+    <%- include("../fragments/footer.ejs") %>
+</body>
+    
+</html>
